@@ -14,5 +14,18 @@ class Howdy extends Hello {
   }
 }
 
-let a = new Howdy();
-a.world();
+//let a = new Howdy();
+//a.world();
+
+class Goodbye extends Hello {
+  constructor(msg) {
+    console.log(msg);
+    super();    
+  }
+  world() {
+    console.log("bye");
+  }
+}
+
+var b = new Goodbye('not');
+b.world();
