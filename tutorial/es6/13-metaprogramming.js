@@ -17,6 +17,9 @@ class Shape {
 // metadata
 var s = new Shape();
 console.log(s, s.hasOwnProperty(size), s[size]);
+console.log(Object.keys(s));
+console.log(Object.getOwnPropertySymbols(s));
+console.log(Object.getOwnPropertyNames(s));
 
 
 // proxy
@@ -26,6 +29,9 @@ var target = {
     console.log('TARGET, hello world');
   }
 };
+
+target.hello();
+
 var handler = {};
 
 var proxy = new Proxy(target, handler);
